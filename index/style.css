@@ -1,0 +1,104 @@
+body{
+	background-color: #faf8f3;
+	 font-family: "jaf-facitweb",sans-serif;
+	 color: #b2b2a0;
+ }
+
+div#header{
+	
+	margin-bottom: 4%;
+}
+
+
+a{
+	color: #8ec77e;
+}
+
+a:hover{
+	color: #8ec77e;
+}
+
+#main-container div.ad.row-fluid.below-footer div.span12 {
+	margin-top: 40px;
+}
+
+div#main-container{
+	/*background-color: white;
+	padding: 20px;*/
+	border-radius: 5px;
+	margin-top: 4%;
+	/*border: 1px solid #cbcccb;*/
+	margin-bottom: 2%;
+}
+
+div#intro.span12 {
+	font-size: 180%;
+	line-height: 150%;
+	font-weight: 100;
+	margin-bottom: 4%;
+}
+
+div.preview {
+	background-color: #ffffff;
+	padding: 20px;
+	border-radius: 5px;
+/*	border: 1px dashed #8ec77e;*/
+	margin-bottom: 4%;
+}
+
+#main-container div.ad.row-fluid div.span12 {
+text-align: center;
+background-color: #f6f3eb;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+
+div.accordion-group {
+		background-color: white;
+	}
+	
+	span.help-block {
+		font-size: 80%;
+		color: #adada6;
+		line-height: 1.3em;
+		
+	}
+	
+	
+	
+	.highlight{
+	
+	background: rgba(232,255,155,0.74);
+}
+
+a.accordion-toggle:hover {
+	text-decoration: none;
+}
+
+h1{
+	font-size: 102px;
+	line-height: normal;
+}
+
+h1, h2, h3, h4 {
+	font-family: "ff-meta-serif-web-pro";
+	color: #8fc87e;
+	font-weight: normal;
+	font-style: normal;
+/*	margin-bottom: 20px;*/
+	}
+	
+
+
+a.chrome:hover{
+	color: #007cf7;
+}
+
+a.firefox:hover {
+	color: #ff6c00;
+}
+/*
+input#logo{
+	display: none;
+}*/
+
