@@ -1,1 +1,481 @@
-My GitHub Page
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	    <title>Email html signature generator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <!-- Bootstrap -->
+	    <link href="index/bootstrap.css" rel="stylesheet" media="screen">
+	    <link href="index/bootstrap-responsive.css" rel="stylesheet" media="screen">
+	    <link href="index/colorpicker.css" rel="stylesheet" media="screen">
+	    <link href="index/style.css" rel="stylesheet" media="screen">
+        <meta name="description" content="Create an hmtl signature for your email client in just a few steps using our online email signature generator.">
+  	</head>
+    <body>
+	    <div id="main-container" class="container">
+		    <div id="header" class="row">
+		    	<div class="span12">
+		    	<h1>Signature Generator</h1>
+		    	</div>
+		    </div>
+		   <div class="row">
+		   	<div id="intro" class="span12">
+		   	<p class="">
+		   	Fill out the fields on the left (Leave any blank that you would like to skip) then press the remove Empty button. Next step is to copy paste this to your email client signature text box. It is recommended that you use either <a href="http://www.mozilla.org/en-US/firefox/new/" class="firefox">firefox</a> or <a href="https://www.google.com/intl/en/chrome/browser/" class="chrome">chrome</a>.
+		   	</p>
+		   	
+		   	</div>
+		   	
+		   
+		   </div>
+		    <div class="row">
+			   
+			    <div class="span3">
+			    
+			    <h4>Your Information</h4>
+			    
+			    	<form id="sig">
+			    	  <fieldset>
+			    	  
+			    	  		    	  
+			    	  <div class="accordion" id="accordion2">
+			    	   
+			    	    <div class="accordion-group">
+			    	      <div class="accordion-heading">
+			    	        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+			    	          Primary information
+			    	        </a>
+			    	      </div>
+			    	      <div id="collapseOne" class="accordion-body collapse in">
+			    	        <div class="accordion-inner">
+			    	          
+			    	          <label>Name</label>
+			    	           <input id="name" placeholder="Sebastien Barrau" type="text">
+			    	          
+			    	           <label>Title</label>
+			    	           <input id="title" placeholder="Front end Developer" type="text">
+			    	          		    	    
+			    	           <label>Email</label>
+			    	           <input id="email" placeholder="sebastien@3sparks.net" type="text">
+			    	           
+			    	           <label>Mobile Phone</label>
+			    	           <input id="mobile" placeholder="305-999-9999" type="text">
+			    	          
+			    	        </div>
+			    	      </div>
+			    	    </div>
+			    	    
+			    	    <div class="accordion-group">
+			    	      <div class="accordion-heading">
+			    	        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+			    	          Company information
+			    	        </a>
+			    	      </div>
+			    	      <div id="collapseTwo" class="accordion-body collapse">
+			    	        <div class="accordion-inner">
+			    	          
+			    	          
+			    	          <label>Company Name</label>
+			    	          <input id="company" placeholder="My awesome Company" type="text">
+			    	          <input name="logourlcheck" value="" type="hidden">
+			    	         <label>Company Logo</label>
+			    	         <p><a href="#" class="btn btn-primary uploadlogo" onclick="uploadLogo()"><i class="icon-upload icon-white"></i> Upload Logo</a></p>
+			    	         <span class="help-block">Logo will be resized to fit 200px by 100px. Accepted file formats are jpg, png and gif under 500kbs.</span>
+			    	           
+			    	           		    	          
+			    	         		    	          
+			    	          <label>Website</label>
+			    	          <input id="website" placeholder="http://www.yoursite.com" type="text">
+			    	          
+			    	          
+			    	          <label>Office Phone</label>
+			    	          <input id="office" type="text">
+			    	          
+			    	          <label>Fax</label>
+			    	          <input id="fax" type="text">
+			    	          
+			    	          
+			    	          <label>Address</label>
+			    	          <textarea rows="3" id="address" class="" value=""></textarea>
+			    	          
+			    	          
+			    	          
+			    	        </div>
+			    	      </div>
+			    	    </div>
+			    	    
+			    	    <div class="accordion-group">
+			    	      <div class="accordion-heading">
+			    	        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+			    	          Social
+			    	        </a>
+			    	      </div>
+			    	      <div id="collapseThree" class="accordion-body collapse">
+			    	        <div class="accordion-inner">
+			    	         	
+			    	         	
+			    	         	<label>Twitter</label>
+			    	         	<input id="twitter" type="text">
+			    	         	 <span class="help-block">Url of your profile page.</span>
+			    	         	
+			    	         	<label>Facebook</label>
+			    	         	<input id="facebook" type="text">
+			    	         	<span class="help-block">Url of your profile page.</span>
+			    	         		
+			    	         	<label>Linked in</label>
+			    	         	<input id="linkedin" type="text">
+			    	         	<span class="help-block">Url of your profile page.</span>
+			    	         
+			    	         	<label>Instagram</label>
+			    	         	<input id="instagram" type="text">
+			    	         	<span class="help-block">Url of your profile page.</span>
+			    	         	
+			    	         	<label>Dribbble</label>
+			    	         	<input id="dribbble" type="text">
+			    	         	<span class="help-block">Url of your profile page.</span>
+			    	         	
+			    	         	<label>Skype</label>
+			    	         	<input id="skype" placeholder="skype:username" type="text">
+			    	         	<span class="help-block">Username as shown in the box</span>
+			    	         	
+			    	         	
+			    	        </div>
+			    	      </div>
+			    	    </div>
+			    	    
+			    	    
+			    	    <div class="accordion-group">
+			    	      <div class="accordion-heading">
+			    	        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+			    	          Other
+			    	        </a>
+			    	      </div>
+			    	      <div id="collapseFour" class="accordion-body collapse">
+			    	        <div class="accordion-inner">
+			        	         
+			        	         <label>Disclaimer</label>
+			        	         <textarea rows="3" id="disclaimer" class="" value="">This e-mail message may contain confidential or legally privileged information and is intended only for the use of the intended recipient(s). Any unauthorized disclosure, dissemination, distribution, copying or the taking of any action in reliance on the information herein is prohibited. E-mails are not secure and cannot be guaranteed to be error free as they can be intercepted, amended, or contain viruses. Anyone who communicates with us by e-mail is deemed to have accepted these risks. Company Name is not responsible for errors or omissions in this message and denies any responsibility for any damage arising from the use of e-mail. Any opinion and other statement contained in this message and any attachment are solely those of the author and do not necessarily represent those of the company.
+			        	         </textarea>
+			        	         <span class="help-block">Replace company name with your comapny name</span>
+			    	        </div>
+			    	      </div>
+			    	    </div>
+			    	    
+			    	  </div> <!--end accordion2-->
+			    	  
+			    	  
+			    	    <a class="btn btn-danger" id="clearEmpty"><i class="icon-trash icon-white"></i> Remove Empty</a> <a class="btn btn-success" onclick="window.location.reload()" href="javascript:;"><i class="icon-refresh icon-white"></i> Reset</a><!-- <a class="btn btn-danger btn-small"><i class="icon-trash icon-white"></i> clear all</a>-->
+			    	  </fieldset>
+			    	</form>
+			    <p>Any flied left blank will be removed once you press the Remove empty button.</p>
+			    </div>
+			    
+			    
+			    <div class="span8 offset1">
+			    
+			    <h4>Default Style</h4>
+			    <div class="accordion" id="accordion3">
+			      <div class="accordion-group">
+			        <div class="accordion-heading">
+			          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#collapse5">
+			            Set Styling Options
+			          </a>
+			        </div>
+			        
+			        <div id="collapse5" class="accordion-body collapse in">
+			          <div class="accordion-inner">
+			          	<form id="styles" class="form-inline">
+ 
+			            <label>Text Color
+			            <div class="input-append color" data-color="#999" data-color-format="hex" id="cp2">
+			            				<input class="span2" value="#999" readonly="readonly" type="text">
+			            				<span class="add-on"><i style="background-color: #999; "></i></span>
+			            </div>
+			            </label>
+			            
+						<label>Link Color
+						<div class="input-append color" data-color="#DDA200" data-color-format="hex" id="cp3">
+										<input class="span2" value="#DDA200" readonly="readonly" type="text">
+										<span class="add-on"><i style="background-color: #DDA200; "></i></span>
+						</div>
+						</label>
+						
+	                    <label>Font Style
+	                    <select id="font-style" name="fontstyle">
+	                    	<option selected="selected" value="Helvetica, Arial, sans-serif">Helvetica / Arial</option>
+	                        <option value="Georgia, Times, serif">Georgia / Times</option>
+	                    </select>
+						</label>
+						
+						
+	                    <label>Font Size
+	                    <select id="font-size" name="fontsize">
+	                    	<option selected="selected" value="10">Small</option>
+	                        <option value="12">Medium</option>
+	                        <option value="14">Large</option>
+	                    </select>
+	                    </label>
+	                    
+		            </form>
+		            
+			            <p><small>More options coming soon.</small></p>
+			            
+			          </div>
+			        </div>
+			      </div>
+			      
+			    </div>
+			    
+			   
+	<!--		    	<div><a href="#" id="copy-preview" class="btn">Copy</a></div>-->
+			    	<div class="preview">
+			    		
+			    		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 10px;"><a href="http://www.sebastienb.com/" class="clink"><img src="img/logo-3.png" alt="3sparks llc" id="sig-logo" border="0"></a></p>
+			    		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 10px; line-height: 11px; color: #999;"><span id="name-input" style="font-weight: bold;" class="txt">Sebastien Barrau</span>
+			    		<span id="title-sep">/</span> <span id="title-input" style="color: #999;" class="txt">Front End Developer</span><br>
+			    		<span id="mobile-input" style="color: #999;" class="txt">(305) 999-9999</span><span id="email-sep" class="txt">/</span>  <a id="email-input" class="link email" href="mailto:sbarrau@3sparks.net" style="color: #DDA200">me@sebastienb.com</a></p>
+			    		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 10px; line-height: 11px">
+	                        <span id="company-input" style="font-weight: bold; color: #999;" class="txt">Company Name</span>
+	                        <span id="office-sep" style="color: #999;" class="txt">Office: </span> <span id="office-input" style="color: #999;" class="txt">(786) 999-9999</span> 
+	                        <span id="fax-sep" style="color: #999;" class="txt">/ Fax: </span> <span id="fax-input" style="color: #999;" class="txt">(786) 999-9999</span>
+	                        <span id="address-sep"><br></span> <span id="address-input" style="color: #999;" class="txt">555 The Coolest St / Miami, Florida 33333 USA</span><br>
+	                        <a id="website-input" class="link" href="http://www.sebastienb.com/" style="color: #DDA200">http://www.sebastienb.com</a>
+	                    </p>
+	                    <p><a id="facebook-input" class="social" href="####"><img src="img/facebook.png" alt="Facebook"></a> <a id="twitter-input" class="social" href="####"><img src="img/twitter.png" alt="Twitter"></a> <a id="linkedin-input" class="social" href="####"><img src="img/linkedin.png" alt="Linkedin"></a> <a id="instagram-input" class="social" href="#####"><img src="img/instagram.png" alt="Instagram"></a> <a id="dribbble-input" class="social" href="####"><img src="img/dribbble.png" alt="Dribbble"></a> <a id="skype-input" class="social" href="######"><img src="img/skype.png" alt="Skype"></a></p>
+	                    <p id="disclaimer-input" style="font-family: Helvetica, Arial, sans-serif; color: #999; font-size: 9px; line-height: 11px;" class="txt">This e-mail message may contain confidential or legally privileged information and is intended only for the use of the intended recipient(s). Any unauthorized disclosure, dissemination, distribution, copying or the taking of any action in reliance on the information herein is prohibited. E-mails are not secure and cannot be guaranteed to be error free as they can be intercepted, amended, or contain viruses.  Anyone who communicates with us by e-mail is deemed to have accepted these risks. Company Name is not responsible for errors or omissions in this message and denies any responsibility for any damage arising from the use of e-mail.  Any opinion and other statement contained in this message and any attachment are solely those of the author and do not necessarily represent those of the company.
+	                    </p>
+			    		
+			    	</div>			    	
+			    </div>
+		    
+		    </div>
+	    
+	 
+		    <div class="row">
+			    
+			    <div class="span4 small">by <a href="javascript:;">@xxxx</a> with help from <a href="javascript:;">@xxxxx</a></div>
+			    <div class="span8">
+			    	
+			    
+			    </div>
+		    </div>
+
+	    </div> <!--close main-container-->
+    
+        
+	    <script src="index/jquery-latest.js"></script>
+	    <script src="index/bootstrap.js"></script>
+	    <script src="index/bootstrap-colorpicker.js"></script>
+	     <!-- Adds the Filepicker.io javascript library to the page -->
+	    <script src="index/filepicker.js"></script>
+	    <script type="text/javascript">
+	        //Seting up Filepicker.io with your api key
+	        filepicker.setKey('AnBDHlixLT4uPS7I6DuHGz');
+	        
+	        function uploadLogo()
+	        {
+		        filepicker.pick(function(fpfile){
+		                    
+		                   theLogo = fpfile.url;
+	//	                   $("#logo").val(theLogo);
+		                   $("#sig-logo").attr("src", theLogo+'/convert?w=150&h=55&fit=clip');
+		                }
+		            );
+	        };
+	        
+	                
+	    </script>
+	    
+	    
+	    
+	    <script type="text/javascript"> 
+	    
+	    activeContainer = "";
+	    
+	     $(document).ready(function() {
+	       
+	     	// Signature Generator
+	     	// replace input containers
+	     	
+	     	
+	     	$('#website').keyup(function() {
+	     	
+	     	
+	     	$('a.clink').attr( "href", $(this).val() );
+	     	
+	     	$('a.website-input').attr( "href", $(this).val() );
+	     	
+	     	
+	     	
+	     	})
+	     	
+	     	
+	     	
+	     	
+	     	
+	     	$('#sig input, #sig textarea').keyup(function(){
+	     	   			
+	     		theID = $(this).attr("id");
+		     	target = '#' + theID + '-input'; 
+		     	
+		     	//remove highlight, if different
+		     	if(theID != activeContainer){
+		     		$(".highlight").removeClass("highlight");
+			     	activeContainer = theID;
+			     	
+			     	//set highlight
+		     		$(target).addClass('highlight');
+			     	
+		     	}
+		     	
+		     	//check if not a social icon
+		     	if(!$(target).hasClass('social')){
+
+	//		     	change value, if not blank
+			     	if( $(this).val() != ""){
+			     		$(target).html( $(this).val() );			     				     	
+			     	}else{
+			     		$(target).html( $(this).attr('placeholder') );
+			     	
+			     	}
+		     	}else{
+			     	
+		     	}
+		     	
+		     	//if anchor (email), also update the href
+		     	
+		     	if($(target).hasClass('email')) {
+		     		$(target).attr( "href", "mailto:" + $(this).val() );
+		     	} else if($(target).get(0).tagName == "A") {
+			     	$(target).attr( "href", $(this).val() );
+		     	}    	
+	     	})
+			
+			//change font style
+			$('#font-style').change( function(){
+				newValue = $(this).val();
+				$('.preview p').css('font-family', newValue );
+			});
+			
+			//change font size
+			$('#font-size').change( function(){
+				newValue = $(this).val();
+				lineHeight =  parseFloat(newValue) + 2;
+				$('.preview p').css('font-size', newValue + 'px' );
+				$('.preview p').css('line-height', (lineHeight) + 'px' );
+				
+				//make disclaimer 1 size smaller
+				smallerValue = parseFloat(newValue) - 1;
+				smallerValuelh = parseFloat(newValue) +2; 
+				$('#disclaimer-input').css('font-size', smallerValue + 'px');
+				$('#disclaimer-input').css('line-height', smallerValuelh + 'px');
+			});
+	     	     	
+	     	//toggle highlight on click
+	     	$('#sig input, #sig textarea').focus(function(){
+	     		theID = $(this).attr("id");
+		     	target = '#' + theID + '-input'; 
+
+		     	if(theID != activeContainer){
+		     		$(".highlight").removeClass("highlight");
+			     	activeContainer = theID;
+		     		$(target).addClass('highlight');     	
+		     	}
+	     	})
+			
+			$('#sig input, #sig textarea').blur(function() {
+			
+				$(".highlight").removeClass("highlight");
+			
+			})
+	       
+	        $('#cp3').colorpicker();
+			// Function to change link colors as color picker moves
+
+	        $('#cp3').colorpicker().on('changeColor', function(ev){
+	          
+	        	$('.link').attr("style", "color: "+ ev.color.toHex());
+	          
+	        });
+	        
+	        
+	        
+	        $('#cp2').colorpicker();
+	        // Function to change link colors as color picker moves
+	        
+	                $('#cp2').colorpicker().on('changeColor', function(ev){
+	                  
+					// $('.txt').attr("style", "color: "+ ev.color.toHex());
+		
+	                	$('.txt').css({color: ev.color.toHex()})
+	                  
+	                });
+	          
+
+
+		//Prevent form from submitting when enter key is pressed
+
+			$(window).keydown(function(event){
+			    if(event.keyCode == 13) {
+			      event.preventDefault();
+			      return false;
+			    }
+			  });
+
+
+
+		//     clear empty function
+	     
+	     function clearEmpty()
+	     {
+	          $('#sig input, #sig textarea').each(function(index, value) { 
+	             theID = $(this).attr("id");
+	             target = '#' + theID + '-input';
+	             
+	             if( $(this).val() == ""){
+						$(target).remove();			     				     	
+				 		$('#'+ theID + '-sep').remove();
+				 }
+				 
+				 $('img[src*="img/logo-3.png"]').remove();
+				 	
+				 			 
+				 
+				 
+				 
+				 
+				 });
+				 
+			   	 
+		         
+	     };
+
+
+	 	$('#clearEmpty').click(clearEmpty);
+
+
+	     });
+
+	    </script>
+	    
+		<iframe style="display: none;" src="index/a.html" id="filepicker_comm_iframe" name="filepicker_comm_iframe"></iframe>
+		<div class="colorpicker dropdown-menu">
+			<div style="background-color: rgb(255, 187, 0);" class="colorpicker-saturation"><i style="left: 100px; top: 13.3333px;"><b></b></i></div>
+			<div class="colorpicker-hue"><i style="top: 87.7828px;"></i></div>
+			<div class="colorpicker-alpha"><i style="top: 0px;"></i></div>
+			<div style="display: none;" class="colorpicker-color">
+				<div>
+				</div>
+			</div>
+		</div>
+		<div class="colorpicker dropdown-menu">
+			<div style="background-color: rgb(255, 0, 0);" class="colorpicker-saturation"><i style="left: 0px; top: 40px;"><b></b></i></div>
+			<div class="colorpicker-hue"><i style="top: 0px;"></i></div>
+			<div class="colorpicker-alpha"><i style="top: 0px;"></i></div>
+			<div style="display: none;" class="colorpicker-color">
+				<div></div>
+			</div>
+		</div>
+	</body>
+</html>
