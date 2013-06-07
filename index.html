@@ -301,16 +301,31 @@
 
 	     	$('#website').keyup(function() {
 	     	
-	     	website_url = $(this).val();
+		     	website_url = $(this).val();
 
-	     	if ( (website_url.indexOf("http://") == -1) && (website_url.indexOf("https://") == -1) ) {
-	     		website_url = "http://" + website_url;
-	     		console.log(website_url);
-	     	};
+		     	if ( (website_url.indexOf("http://") == -1) && (website_url.indexOf("https://") == -1) ) {
+		     		website_url = "http://" + website_url;
+		     		console.log(website_url);
+		     	};
+		     	
+		     	$('a.clink').attr( "href", website_url );
+		     	
+		     	$('a#website-input').attr( "href", website_url );
+    	
+	     	})
+	     		
+	     	$('#website').change(function() {
 	     	
-	     	$('a.clink').attr( "href", website_url );
-	     	
-	     	$('a#website-input').attr( "href", website_url );
+		     	website_url = $(this).val();
+
+		     	if ( (website_url.indexOf("http://") == -1) && (website_url.indexOf("https://") == -1) ) {
+		     		website_url = "http://" + website_url;
+		     		console.log(website_url);
+		     	};
+		     	
+		     	$('a.clink').attr( "href", website_url );
+		     	
+		     	$('a#website-input').attr( "href", website_url );
     	
 	     	})
 	     		
@@ -333,7 +348,47 @@
 		     	//check if not a social icon
 		     	if(!$(target).hasClass('social')){
 
-	//		     	change value, if not blank
+	            // change value, if not blank
+			     	if( $(this).val() != ""){
+			     		$(target).html( $(this).val() );			     				     	
+			     	}else{
+			     		$(target).html( $(this).attr('placeholder') );
+			     	
+			     	}
+		     	}else{
+			     	
+		     	}
+		     	
+		     	//if anchor (email), also update the href
+		     	
+		     	if($(target).hasClass('email')) {
+		     		$(target).attr( "href", "mailto:" + $(this).val() );
+		     	} else if($(target).get(0).tagName == "A") {
+		     		if ($(target).attr("id") == "website-input") {}else{
+		     			$(target).attr( "href", $(this).val() );
+		     		}	     	
+		     	}    	
+	     	})
+
+			$('#sig input, #sig textarea').change(function(){
+	     	   			
+	     		theID = $(this).attr("id");
+		     	target = '#' + theID + '-input'; 
+		     	
+		     	//remove highlight, if different
+		     	if(theID != activeContainer){
+		     		$(".highlight").removeClass("highlight");
+			     	activeContainer = theID;
+			     	
+			     	//set highlight
+		     		$(target).addClass('highlight');
+			     	
+		     	}
+		     	
+		     	//check if not a social icon
+		     	if(!$(target).hasClass('social')){
+
+				// change value, if not blank
 			     	if( $(this).val() != ""){
 			     		$(target).html( $(this).val() );			     				     	
 			     	}else{
@@ -432,33 +487,23 @@
 	     
 	     function clearEmpty()
 	     {
-	          $('#sig input, #sig textarea').each(function(index, value) { 
-	             theID = $(this).attr("id");
-	             target = '#' + theID + '-input';
+	        $('#sig input, #sig textarea').each(function(index, value) { 
+	            theID = $(this).attr("id");
+	            target = '#' + theID + '-input';
 	             
-	             if( $(this).val() == ""){
-						$(target).remove();			     				     	
-				 		$('#'+ theID + '-sep').remove();
-				 }
+	            if( $(this).val() == ""){
+					$(target).remove();			     				     	
+				 	$('#'+ theID + '-sep').remove();
+				}
 				 
-				 $('img[src*="img/logo.png"]').remove();
-				 	
-				 			 
-				 
-				 
-				 
-				 
-				 });
-				 
-			   	 
-		         
-	     };
+				$('img[src*="img/logo.png"]').remove();
+			});         
+	    };
 
 
 	 	$('#clearEmpty').click(clearEmpty);
 
-
-	     });
+	    });
 
 	    </script>
 	    
