@@ -1,6 +1,6 @@
 body{
 	background-color: #faf8f3;
-	 font-family: "jaf-facitweb",sans-serif;
+	 font-family: Helvetica,Corbel,"Microsoft YaHei",Verdana,Arial,sans-serif;
 	 color: #b2b2a0;
  }
 
@@ -76,12 +76,12 @@ a.accordion-toggle:hover {
 }
 
 h1{
-	font-size: 102px;
+	font-size: 60px;
 	line-height: normal;
 }
 
 h1, h2, h3, h4 {
-	font-family: "ff-meta-serif-web-pro";
+	font-family: Helvetica,Corbel,"Microsoft YaHei",Verdana,Arial,sans-serif;
 	color: #8fc87e;
 	font-weight: normal;
 	font-style: normal;
