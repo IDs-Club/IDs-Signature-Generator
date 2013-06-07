@@ -271,14 +271,13 @@
 	    <script src="index/filepicker.js"></script>
 	    <script type="text/javascript">
 	        //Seting up Filepicker.io with your api key
-	        filepicker.setKey('AnBDHlixLT4uPS7I6DuHGz');
+	        filepicker.setKey('AicjbPIDKTGu98lDJPbEyz');
 	        
 	        function uploadLogo()
 	        {
 		        filepicker.pick(function(fpfile){
 		                    
 		                   theLogo = fpfile.url;
-	//	                   $("#logo").val(theLogo);
 		                   $("#sig-logo").attr("src", theLogo+'/convert?w=150&h=55&fit=clip');
 		                }
 		            );
@@ -298,21 +297,23 @@
 	     	// Signature Generator
 	     	// replace input containers
 	     	
-	     	
+	     	var website_url;
+
 	     	$('#website').keyup(function() {
 	     	
+	     	website_url = $(this).val();
+
+	     	if ( (website_url.indexOf("http://") == -1) && (website_url.indexOf("https://") == -1) ) {
+	     		website_url = "http://" + website_url;
+	     		console.log(website_url);
+	     	};
 	     	
-	     	$('a.clink').attr( "href", $(this).val() );
+	     	$('a.clink').attr( "href", website_url );
 	     	
-	     	$('a.website-input').attr( "href", $(this).val() );
-	     	
-	     	
-	     	
+	     	$('a#website-input').attr( "href", website_url );
+    	
 	     	})
-	     	
-	     	
-	     	
-	     	
+	     		
 	     	
 	     	$('#sig input, #sig textarea').keyup(function(){
 	     	   			
@@ -348,7 +349,9 @@
 		     	if($(target).hasClass('email')) {
 		     		$(target).attr( "href", "mailto:" + $(this).val() );
 		     	} else if($(target).get(0).tagName == "A") {
-			     	$(target).attr( "href", $(this).val() );
+		     		if ($(target).attr("id") == "website-input") {}else{
+		     			$(target).attr( "href", $(this).val() );
+		     		}	     	
 		     	}    	
 	     	})
 			
