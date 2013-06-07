@@ -11,7 +11,7 @@ div#header{
 
 
 a{
-	color: #8ec77e;
+	color: #00a299;
 }
 
 a:hover{
@@ -82,7 +82,7 @@ h1{
 
 h1, h2, h3, h4 {
 	font-family: Helvetica,Corbel,"Microsoft YaHei",Verdana,Arial,sans-serif;
-	color: #8fc87e;
+	color: #00a299;
 	font-weight: normal;
 	font-style: normal;
 /*	margin-bottom: 20px;*/
