@@ -88,7 +88,13 @@ h1, h2, h3, h4 {
 /*	margin-bottom: 20px;*/
 	}
 	
-
+span.remove{
+	position: relative;
+	bottom:4px;
+	right: 20px;
+	cursor: pointer;
+	z-index: 10;
+}
 
 a.chrome:hover{
 	color: #007cf7;

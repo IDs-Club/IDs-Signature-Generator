@@ -90,14 +90,14 @@
 			    	          
 			    	          
 			    	          <label>Office Phone</label>
-			    	          <input id="office" type="text">
+			    	          <input placeholder="(03) 8888-8888" id="office" type="text">
 			    	          
 			    	          <label>Fax</label>
-			    	          <input id="fax" type="text">
+			    	          <input id="fax" placeholder="(03) 8888-8888" type="text">
 			    	          
 			    	          
 			    	          <label>Address</label>
-			    	          <textarea rows="3" id="address" class="" value=""></textarea>
+			    	          <textarea rows="3" id="address" placeholder="450 St. Kilda Rd. Melbourne VIC 3004"></textarea>
 			    	          
 			    	          
 			    	          
@@ -155,7 +155,7 @@
 			    	        <div class="accordion-inner">
 			        	         
 			        	         <label>Disclaimer</label>
-			        	         <textarea rows="3" id="disclaimer" class="" value="">This e-mail message may contain confidential or legally privileged information and is intended only for the use of the intended recipient(s). Any unauthorized disclosure, dissemination, distribution, copying or the taking of any action in reliance on the information herein is prohibited. E-mails are not secure and cannot be guaranteed to be error free as they can be intercepted, amended, or contain viruses. Anyone who communicates with us by e-mail is deemed to have accepted these risks. Company Name is not responsible for errors or omissions in this message and denies any responsibility for any damage arising from the use of e-mail. Any opinion and other statement contained in this message and any attachment are solely those of the author and do not necessarily represent those of the company.
+			        	         <textarea rows="3" id="disclaimer" placeholder="This e-mail message may contain confidential or legally privileged information and is intended only for the use of the intended recipient(s). Any unauthorized disclosure, dissemination, distribution, copying or the taking of any action in reliance on the information herein is prohibited. E-mails are not secure and cannot be guaranteed to be error free as they can be intercepted, amended, or contain viruses. Anyone who communicates with us by e-mail is deemed to have accepted these risks. Company Name is not responsible for errors or omissions in this message and denies any responsibility for any damage arising from the use of e-mail. Any opinion and other statement contained in this message and any attachment are solely those of the author and do not necessarily represent those of the company.">This e-mail message may contain confidential or legally privileged information and is intended only for the use of the intended recipient(s). Any unauthorized disclosure, dissemination, distribution, copying or the taking of any action in reliance on the information herein is prohibited. E-mails are not secure and cannot be guaranteed to be error free as they can be intercepted, amended, or contain viruses. Anyone who communicates with us by e-mail is deemed to have accepted these risks. Company Name is not responsible for errors or omissions in this message and denies any responsibility for any damage arising from the use of e-mail. Any opinion and other statement contained in this message and any attachment are solely those of the author and do not necessarily represent those of the company.
 			        	         </textarea>
 			        	         <span class="help-block">Replace company name with your comapny name</span>
 			    	        </div>
@@ -189,15 +189,15 @@
  
 			            <label>Text Color
 			            <div class="input-append color" data-color="#999" data-color-format="hex" id="cp2">
-			            				<input class="span2" value="#999" readonly="readonly" type="text">
-			            				<span class="add-on"><i style="background-color: #999; "></i></span>
+			            	<input class="span2" value="#999" readonly="readonly" type="text">
+			            	<span class="add-on"><i style="background-color: #999; "></i></span>
 			            </div>
 			            </label>
 			            
 						<label>Link Color
 						<div class="input-append color" data-color="#DDA200" data-color-format="hex" id="cp3">
-										<input class="span2" value="#DDA200" readonly="readonly" type="text">
-										<span class="add-on"><i style="background-color: #DDA200; "></i></span>
+							<input class="span2" value="#DDA200" readonly="readonly" type="text">
+							<span class="add-on"><i style="background-color: #DDA200; "></i></span>
 						</div>
 						</label>
 						
@@ -264,7 +264,7 @@
 	    </div> <!--close main-container-->
     
         
-	    <script src="index/jquery-latest.js"></script>
+	    <script src="index/jquery-1.8.0.min.js"></script>
 	    <script src="index/bootstrap.js"></script>
 	    <script src="index/bootstrap-colorpicker.js"></script>
 	     <!-- Adds the Filepicker.io javascript library to the page -->
@@ -299,13 +299,12 @@
 	     	
 	     	var website_url;
 
-	     	$('#website').keyup(function() {
+	     	$('#website').on('keyup change', function() {
 	     	
 		     	website_url = $(this).val();
 
 		     	if ( (website_url.indexOf("http://") == -1) && (website_url.indexOf("https://") == -1) ) {
-		     		website_url = "http://" + website_url;
-		     		console.log(website_url);
+		     		website_url = "http://" + website_url; 
 		     	};
 		     	
 		     	$('a.clink').attr( "href", website_url );
@@ -313,28 +312,12 @@
 		     	$('a#website-input').attr( "href", website_url );
     	
 	     	})
-	     		
-	     	$('#website').change(function() {
-	     	
-		     	website_url = $(this).val();
-
-		     	if ( (website_url.indexOf("http://") == -1) && (website_url.indexOf("https://") == -1) ) {
-		     		website_url = "http://" + website_url;
-		     		console.log(website_url);
-		     	};
-		     	
-		     	$('a.clink').attr( "href", website_url );
-		     	
-		     	$('a#website-input').attr( "href", website_url );
-    	
-	     	})
-	     		
-	     	
-	     	$('#sig input, #sig textarea').keyup(function(){
+	     			     	
+	     	$('#sig input, #sig textarea').on('keyup change', function(){
 	     	   			
 	     		theID = $(this).attr("id");
 		     	target = '#' + theID + '-input'; 
-		     	
+		     	check_val($(this));
 		     	//remove highlight, if different
 		     	if(theID != activeContainer){
 		     		$(".highlight").removeClass("highlight");
@@ -349,46 +332,6 @@
 		     	if(!$(target).hasClass('social')){
 
 	            // change value, if not blank
-			     	if( $(this).val() != ""){
-			     		$(target).html( $(this).val() );			     				     	
-			     	}else{
-			     		$(target).html( $(this).attr('placeholder') );
-			     	
-			     	}
-		     	}else{
-			     	
-		     	}
-		     	
-		     	//if anchor (email), also update the href
-		     	
-		     	if($(target).hasClass('email')) {
-		     		$(target).attr( "href", "mailto:" + $(this).val() );
-		     	} else if($(target).get(0).tagName == "A") {
-		     		if ($(target).attr("id") == "website-input") {}else{
-		     			$(target).attr( "href", $(this).val() );
-		     		}	     	
-		     	}    	
-	     	})
-
-			$('#sig input, #sig textarea').change(function(){
-	     	   			
-	     		theID = $(this).attr("id");
-		     	target = '#' + theID + '-input'; 
-		     	
-		     	//remove highlight, if different
-		     	if(theID != activeContainer){
-		     		$(".highlight").removeClass("highlight");
-			     	activeContainer = theID;
-			     	
-			     	//set highlight
-		     		$(target).addClass('highlight');
-			     	
-		     	}
-		     	
-		     	//check if not a social icon
-		     	if(!$(target).hasClass('social')){
-
-				// change value, if not blank
 			     	if( $(this).val() != ""){
 			     		$(target).html( $(this).val() );			     				     	
 			     	}else{
@@ -457,7 +400,17 @@
 	          
 	        });
 	        
-	        
+	        $('.remove').live('click', function(){
+	        	ptarget = $(this).prev('input');
+	        	if (ptarget.length == 0) {
+	        		ptarget = $(this).prev('textarea');
+	        	};
+	        	ptarget.val('');
+	        	eID = ptarget.attr("id");
+		     	tg = '#' + eID + '-input';
+		     	$(tg).html( ptarget.attr('placeholder') ); 
+		     	$(this).remove();
+	        })
 	        
 	        $('#cp2').colorpicker();
 	        // Function to change link colors as color picker moves
@@ -485,8 +438,8 @@
 
 		//     clear empty function
 	     
-	     function clearEmpty()
-	     {
+	    function clearEmpty()
+	    {
 	        $('#sig input, #sig textarea').each(function(index, value) { 
 	            theID = $(this).attr("id");
 	            target = '#' + theID + '-input';
@@ -504,6 +457,17 @@
 	 	$('#clearEmpty').click(clearEmpty);
 
 	    });
+
+		function check_val(e)
+	    {
+	    	if(e.val() != ''){
+	    		if (e.next('span.remove').length > 0) {}else{
+	    			e.after('<span class="remove"><i class="icon-remove-sign"></i></span>');
+	    		}
+	    	}else{
+	    		e.next('span.remove').remove();
+	    	}	                
+	    };
 
 	    </script>
 	    
